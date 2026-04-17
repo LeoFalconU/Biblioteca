@@ -16,6 +16,14 @@ public class DatosLibro {
         this.titulo = titulo;
         this.autor = autor;
         this.genero = genero;
-        //agregar getters y setter para los datos de libro, clase padre, contructores vecio y con info
     }
+    public int    getNumero() { return numero; }
+    public String getTitulo() { return titulo; }
+    public String getAutor()  { return autor;  }
+    public String getGenero() { return genero; }
+
+    public void setNumero(int    numero) { this.numero = numero; }
+    public void setTitulo(String titulo) { this.titulo = titulo; }
+    public void setAutor (String autor)  { this.autor  = autor;  }
+    public void setGenero(String genero) { this.genero = genero; }
 }
