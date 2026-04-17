@@ -16,11 +16,20 @@ public class AgregarLibroController {
     @FXML private TextField    txtNumero;
     @FXML private TextField    txtTitulo;
     @FXML private TextField    txtAutor;
+    @FXML private TextField txtGenero;
     @FXML private Label lblMensaje;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private void agregarLibro() {
+        String numero = txtNumero.getText();
+        String titulo = txtTitulo.getText();
+        String autor  = txtAutor.getText();
+        String genero = txtGenero.getText();
     }
+     if (numero.isEmpty() || titulo.isEmpty() || autor.isEmpty() || genero.isEmpty()) {
+        lblMensaje.setText("Por favor llena todos los campos.");
+        return;
+    }
+
 
 }
