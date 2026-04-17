@@ -1,0 +1,29 @@
+[33mcommit 04524d71a4a03c4fb0d3093ba57e93783019dfb1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: SarahSantana1 <20253rd044@utez.edu.mx>
+Date:   Fri Apr 17 15:36:41 2026 -0600
+
+    SeIniciar aplicación en pantalla de login
+
+[33mcommit 673fafbeff8598b48998aeff7fe1b3ba928d9a1b[m
+Author: SarahSantana1 <20253rd044@utez.edu.mx>
+Date:   Fri Apr 17 15:06:53 2026 -0600
+
+    Se agregóÃla validación y el cambio de pantalla
+
+[33mcommit 2beed327e9b0f176cecf890f092f1a5af1c588d6[m
+Author: SarahSantana1 <20253rd044@utez.edu.mx>
+Date:   Thu Apr 16 16:41:57 2026 -0600
+
+    Se agregaron los botones y los espacios de usuario y contraseña
+
+[33mcommit 18caaffc3e823685b360d152d1e01be76ab013e3[m
+Author: SarahSantana1 <20253rd044@utez.edu.mx>
+Date:   Thu Apr 16 16:24:13 2026 -0600
+
+    Crear clase usuario para login
+
+[33mcommit 4ffcca89d17251b13ff4f61fc8979b36d2fc3f53[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: LeoFalconU <20253rd053@utez.edu.mx>
+Date:   Thu Apr 16 16:04:29 2026 -0600
+
+    RSe creo el archivo de trabajo
