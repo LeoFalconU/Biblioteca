@@ -1,5 +1,6 @@
 package com.example.biblioteca.controller;
 
+import com.example.biblioteca.Model.DatosLibro;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.collections.FXCollections;
@@ -23,12 +24,21 @@ public class AgregarLibroController {
     private void agregarLibro() {
         String numero = txtNumero.getText();
         String titulo = txtTitulo.getText();
-        String autor  = txtAutor.getText();
+        String autor = txtAutor.getText();
         String genero = txtGenero.getText();
-    }
-     if (numero.isEmpty() || titulo.isEmpty() || autor.isEmpty() || genero.isEmpty()) {
-        lblMensaje.setText("Por favor llena todos los campos.");
-        return;
+
+        if (numero.isEmpty() || titulo.isEmpty() || autor.isEmpty() || genero.isEmpty()) {
+            lblMensaje.setText("Por favor llena todos los campos.");
+            return;
+        }
+
+        DatosLibro libro = new DatosLibro();
+        libro.setNumero(Integer.parseInt(numero));
+        libro.setTitulo(titulo);
+        libro.setAutor(autor);
+        libro.setGenero(genero);
+
+        lblMensaje.setText("Libro agregado: " + libro.getTitulo());
     }
 
 
