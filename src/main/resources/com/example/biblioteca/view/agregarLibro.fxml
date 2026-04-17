@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.biblioteca.controller.AgregarLibroController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="272.0" layoutY="40.0" text="Agregar Libro" />
+            <TextField fx:id="txtNumero" layoutX="226.0" layoutY="74.0" />
+            <TextField fx:id="txtTitulo" layoutX="226.0" layoutY="123.0" />
+            <TextField fx:id="txtAutor" layoutX="226.0" layoutY="175.0" />
+            <TextField layoutX="226.0" layoutY="227.0" />
+            <Label fx:id="lblMessage" layoutX="280.0" layoutY="282.0" />
+            <Button layoutX="275.0" layoutY="319.0" mnemonicParsing="false" onAction="#agregarLibro" text="Agregar" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
