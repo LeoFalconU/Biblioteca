@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.biblioteca.controller.BuscarLibroController"
+      spacing="20"
+      style="-fx-background-color: #1a1a2e; -fx-padding: 30;">
+
+
+    <Label text="🔍 Buscar Libro"
+           style="-fx-text-fill: #e94560;
+                  -fx-font-size: 24px;
+                  -fx-font-weight: bold;"/>
+
+    <Separator style="-fx-background-color: #e94560;"/>
+
+
+    <Label text="Escribe el título del libro:"
+           style="-fx-text-fill: #ffffff; -fx-font-size: 14px;"/>
+
+    <TextField fx:id="txtBuscar"
+               promptText="Ej: Harry Potter..."
+               prefWidth="300"
+               style="-fx-background-color: #16213e;
+                      -fx-text-fill: #ffffff;
+                      -fx-border-color: #e94560;
+                      -fx-border-radius: 6;
+                      -fx-background-radius: 6;
+                      -fx-padding: 10;"/>
+
+
+    <Button text="🔍 Buscar"
+            onAction="#buscarLibro"
+            style="-fx-background-color: #e94560;
+                   -fx-text-fill: #ffffff;
+                   -fx-font-weight: bold;
+                   -fx-font-size: 13px;
+                   -fx-padding: 10 25;
+                   -fx-background-radius: 8;
+                   -fx-cursor: hand;"/>
+
+
+    <Label fx:id="lblMensaje" text=""
+           style="-fx-text-fill: #2ecc71;
+                  -fx-font-size: 13px;
+                  -fx-font-weight: bold;"/>
+
+    <Separator style="-fx-background-color: #533483;"/>
+
+
+    <Label text="Resultado:"
+           style="-fx-text-fill: #ffffff;
+                  -fx-font-size: 16px;
+                  -fx-font-weight: bold;"/>
+
+    <Label fx:id="lblNumero" text=""
+           style="-fx-text-fill: #ffffff; -fx-font-size: 14px;"/>
+    <Label fx:id="lblTitulo" text=""
+           style="-fx-text-fill: #ffffff; -fx-font-size: 14px;"/>
+    <Label fx:id="lblAutor" text=""
+           style="-fx-text-fill: #ffffff; -fx-font-size: 14px;"/>
+    <Label fx:id="lblGenero" text=""
+           style="-fx-text-fill: #ffffff; -fx-font-size: 14px;"/>
+
+</VBox>
