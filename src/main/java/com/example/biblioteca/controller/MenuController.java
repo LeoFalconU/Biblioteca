@@ -16,20 +16,20 @@ public class MenuController {
 
     @FXML
     private void irAgregarLibro() {
-        cargarVista("AgregarLibro.fxml");
+        cargarVista("/com/example/biblioteca/vista/agregarLibro.fxml");
     }
 
 
     @FXML
     private void irBuscarLibro() {
-        cargarVista("BuscarLibro.fxml");
+        cargarVista("/com/example/biblioteca/vista/buscarLibro.fxml");
     }
 
 
     @FXML
     private void cerrarSesion() {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/com/example/biblioteca/vista/login.fxml"));
             Stage stage = (Stage) contenedor.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setTitle("Biblioteca - Login");

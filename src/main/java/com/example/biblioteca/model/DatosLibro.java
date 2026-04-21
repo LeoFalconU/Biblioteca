@@ -1,4 +1,4 @@
-package com.example.biblioteca.Model;
+package com.example.biblioteca.model;
 
 public class DatosLibro {
     private int numero;
@@ -18,7 +18,7 @@ public class DatosLibro {
         this.genero = genero;
     }
     //Getters
-    public int    getNumero() {
+    public int getNumero() {
         return numero; }
     public String getTitulo() {
         return titulo; }
@@ -40,10 +40,10 @@ public class DatosLibro {
     @Override
     public String toString() {
         return "Libro{" +
-                "numero="  + numero  +
-                ", titulo='" + titulo  + '\'' +
-                ", autor='"  + autor   + '\'' +
-                ", genero='" + genero  + '\'' +
+                "numero=" + numero +
+                ", titulo='" + titulo + '\'' +
+                ", autor='" + autor + '\'' +
+                ", genero='" + genero + '\'' +
                 '}';
     }
 

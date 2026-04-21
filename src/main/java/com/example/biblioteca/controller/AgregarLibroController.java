@@ -1,45 +1,45 @@
 package com.example.biblioteca.controller;
 
-import com.example.biblioteca.Model.DatosLibro;
+import com.example.biblioteca.model.Biblioteca;
+import com.example.biblioteca.model.DatosLibro;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-
-import java.net.URL;
-import java.util.ResourceBundle;
+import javafx.scene.control.TextField;
 
 public class AgregarLibroController {
-    @FXML private TextField    txtNumero;
-    @FXML private TextField    txtTitulo;
-    @FXML private TextField    txtAutor;
+
+    @FXML private TextField txtNumero;
+    @FXML private TextField txtTitulo;
+    @FXML private TextField txtAutor;
     @FXML private TextField txtGenero;
-    @FXML private Label lblMensaje;
+    @FXML private Label     lblMensaje;
 
     @FXML
     private void agregarLibro() {
-        String numero = txtNumero.getText();
-        String titulo = txtTitulo.getText();
-        String autor = txtAutor.getText();
-        String genero = txtGenero.getText();
+        String numero = txtNumero.getText().trim();
+        String titulo = txtTitulo.getText().trim();
+        String autor  = txtAutor.getText().trim();
+        String genero = txtGenero.getText().trim();
 
         if (numero.isEmpty() || titulo.isEmpty() || autor.isEmpty() || genero.isEmpty()) {
-            lblMensaje.setText("Por favor llena todos los campos.");
+            lblMensaje.setText("⚠ Por favor llena todos los campos.");
             return;
         }
 
-        DatosLibro libro = new DatosLibro();
-        libro.setNumero(Integer.parseInt(numero));
-        libro.setTitulo(titulo);
-        libro.setAutor(autor);
-        libro.setGenero(genero);
+        int num;
+        try {
+            num = Integer.parseInt(numero);
+        } catch (NumberFormatException e) {
+            lblMensaje.setText("⚠ El número debe ser un entero.");
+            return;
+        }
 
-        lblMensaje.setText("Libro agregado: " + libro.getTitulo());
+        Biblioteca.agregarLibro(new DatosLibro(num, titulo, autor, genero));
+        lblMensaje.setText("✔ Libro agregado: \"" + titulo + "\"");
+
+        txtNumero.clear();
+        txtTitulo.clear();
+        txtAutor.clear();
+        txtGenero.clear();
     }
-
-
 }

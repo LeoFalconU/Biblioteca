@@ -1,4 +1,4 @@
-package Biblioteca.main;
+package com.example.biblioteca;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,11 +11,9 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
 
         FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/biblioteca/vista/login.fxml")
-        );
+                getClass().getResource("/com/example/biblioteca/vista/login.fxml"));
 
         Scene scene = new Scene(loader.load());
-
         stage.setTitle("Login");
         stage.setScene(scene);
         stage.show();
